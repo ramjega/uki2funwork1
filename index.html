@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Music app</title>
+    <link rel="icon" href="images/television.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <script src="//connect.soundcloud.com/sdk.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="script.js"></script>
+  <style>
+  . {
+    display: none;
+  }
+  .show {
+    display: block;
+  }
+a{ color: gray;
+font-weight: normal;}
+.box{background-color: lightgray;
+  display: inline-block;
+padding-left: 5px;padding-right: 5px;
+  font-size: 12px;
+  border-radius: 3px
+
+}
+.feature{
+  padding: 10px;
+}
+.letters-link-size{font-size: 27px;}
+.center {margin: auto;
+width: 65%;
+padding-left: 9%;
+align-self: auto;}
+.background-box{background-color:hsl(0, 0%, 97%);
+padding-top:10px;
+padding-bottom:10px;
+
+
+  }
+#boxshadow {box-shadow: 2px 2px 2px grey;}
+.imgdesign{border-radius: 10px;
+  max-width: 40%;
+  max-height: 80%;
+  min-width: 40%;
+  min-height: 80%;
+}
+.imglink{
+font-size: 20px;
+color: black;}
+.episodes{font-size: 15px;
+color: grey;}
+.back {
+  background-image: url("images/index.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+p{color: white;}
+img{height: 300px;
+width: 100px;}
+.ff{
+  background-image: url("images/yellow-wallpaper-high-wallpapers-definition-these.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+</style>
+  </head>
+  <body style="background-color:hsl(0, 0%, 94%)" >
+<!--starting navbar-->
+<nav id="boxshadow" style="background-color:white;" class="navbar navbar-default">
+
+    <div style="background-color:purple;" class="navbar-header">
+    <a class="navbar-brand"href="#"><span class="glyphicon glyphicon-music"></span> MusicApp</strong></a>
+  </div>
+
+</nav>
+  <!-- nav bar end..-->
+
+
+<!-- Pagination start-->
+<center class="background-box">
+<div class="letters-link-size">
+
+  <!-- letters start-->
+  <button class="btn btn-sm btn-primary"onclick="filterSelection('all')">All</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-0-9')">0-9</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-a')">A</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-b')">B</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-c')">C</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-d')">D</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-e')">E</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-g')">G</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-h')">H</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-i')">I</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-j')">J</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-k')">K</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-l')">L</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-m')">M</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-n')">N</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-o')">O</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-p')">P</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-q')">Q</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-r')">R</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-s')">S</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-t')">T</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-u')">U</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-v')">V</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-w')">W</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-x')">X</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-y')">Y</button>
+<button class="btn btn-sm btn-primary"onclick="filterSelection('letter-z')">Z</button><br></div> <!-- letters ends-->
+
+
+<br>
+<!--Top shows div start-->
+<div class="container-fluid ">
+  <div class="panel panel-default">
+    <div class="panel-heading" style="background-color:orange;"><!--heading pannel starts-->
+    <strong>  TOP TAMIL SONGS</strong>
+  <!--Search box starts here-->
+  <div class="pull-right">
+   <input class="search ng-pristine ng-untouched ng-valid" ng-model="query.name" placeholder="Search..."type="text" >
+      </div><!--search box ends here-->
+    </div><!--Heading pannel ends here-->
+
+<div class="panel-body back">
+  <div class="row show-list">
+
+    <!--shows table start-->
+    <div class="col-sm-3 feature  adventure letter-m">
+    <center><a class="imglink" href="3rdpage.html"><img  class="imgdesign"src="images/220px-Vikram_Vedha_poster.jpg" alt="Man vs wild"></a><br>
+<p><strong>Vikram Vedha-Yaanji-Sam C.S.</strong></p>
+    <button id="start1"class="btn btn-primary" type="button" name="button">Play</button>
+    <button id="stop1" class="btn btn-danger"type="button" name="button">Stop</button>
+  </div>
+
+
+  <div class="col-sm-3 feature  action letter-t">
+  <center><img  class="imgdesign"src="images/aaa.jpg" alt="walking dead"><br>
+<p><strong>Nee Vaanam Naan Mazhai </strong></p>
+  <button id="start2"class="btn btn-primary" type="button" name="button">Play</button>
+  <button id="stop2" class="btn btn-danger"type="button" name="button">Stop</button>
+</div>
+
+
+<div class="col-sm-3 feature  crime letter-b">
+<center><img  class="imgdesign"src="images/maxresdefault.jpg" alt="Bones"><br>
+  <p><strong>Endhira Logathu Sundariye</strong></p>
+<button id="start3" class="btn btn-primary" type="button" name="button">Play</button>
+<button id="stop3"  class="btn btn-danger"type="button" name="button">Stop</button>
+</div>
+
+<div class="col-sm-3 feature  crime letter-b">
+<center><img  class="imgdesign"src="images/711eHgGtnFL._SX385_.jpg" alt="Bones"><br>
+  <p><strong>Orey Oar Ooril</strong></p>
+<button id="start5" class="btn btn-primary" type="button" name="button">Play</button>
+<button id="stop5"  class="btn btn-danger"type="button" name="button">Stop</button>
+</div>
+
+<div class="col-sm-3 feature  crime letter-b">
+<center><img  class="imgdesign"src="images/movieposter.jpg.png" alt="Bones"><br>
+  <p><strong>On Nenapu On Nenapu Baby</strong></p>
+<button id="start6" class="btn btn-primary" type="button" name="button">Play</button>
+<button id="stop6"  class="btn btn-danger"type="button" name="button">Stop</button>
+</div>
+
+<div class="col-sm-3 feature  crime letter-b">
+<center><img  class="imgdesign"src="images/Rhythmsoundtrack.jpg" alt="Bones"><br>
+  <p><strong>Katre En Vaasal</strong></p>
+<button id="start7" class="btn btn-primary" type="button" name="button">Play</button>
+<button id="stop7"  class="btn btn-danger"type="button" name="button">Stop</button>
+</div>
+
+
+<div class="col-sm-3 feature  crime letter-b">
+<center><img  class="imgdesign"src="images/Kadhalar-Dhinam-1999.jpg" alt="Bones"><br>
+  <p><strong>Roja Roja</strong></p>
+<button id="start8" class="btn btn-primary" type="button" name="button">Play</button>
+<button id="stop8"  class="btn btn-danger"type="button" name="button">Stop</button>
+</div>
+
+
+<div class="col-sm-3 feature  thriller letter-b">
+<center><img  class="imgdesign"src="images/220px-Thiruttu_Payale_2_Poster.jpg" alt="Breakingdad"><br>
+  <p><strong>Nee Paarkum Paarvai</strong></p>
+<button id="strat4"class="btn btn-primary" type="button" name="button">Play</button>
+<button id="stop4" class="btn btn-danger"type="button" name="button">Stop</button>
+</div></div></div></div>
+
+
+
+<!--footer start-->
+<footer><div class="container-fluid ff footer-default" id="shadowbox" style="background-color:white;"><center><div>
+  <div class="col-sm-4 feature"
+
+  <p style="align:right;">Created by Uki coding school student.<br>This is a Uki coding school fun work.| Created & Designed | by <a href="https://ramjega.github.iomjega.github.io/"><strong>Sriram</strong></a><br><a href="http://uki.life/">UKI LIFE</a><br>info@uki.life</p>
+</div>
+  <div class="col-sm-4 feature"><center><h3>| Thank you for visited to this page |</h3></center></div>
+  <div class="col-sm-4 feature" style="align-self:right;">
+    <p>Jegatheesan Sriram <br>0775228995 <br>sriramram1995@gmail.com <br><a href="https://ramjega.github.iomjega.github.io/">Website</a></div>
+  </div>
+
+</div></div></center>
+</footer>
+
+</body>
+</html>
