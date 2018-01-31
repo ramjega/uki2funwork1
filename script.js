@@ -54,7 +54,7 @@ $(document).ready(function() {
       e.preventDefault();
       sound.start();
     });
-    $('#stop6').click(function(e) {
+    $('#stop5').click(function(e) {
       e.preventDefault();
       sound.stop();
     });
